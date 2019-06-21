@@ -9,3 +9,9 @@
 		等同于：
 			git add .
 			git commit -m "<提交的内容注释>"
+
+
+在本地主分支master合并dev分支，将master更新到最新
+	git checkout master
+		切换分支时，必须先将当前的分支进行commit提交，或者stash暂存。
+	git merge dev
