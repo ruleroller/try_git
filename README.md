@@ -1,6 +1,7 @@
-这是一个readme范例，测试1
+直接创建一个当前线路的分支，命名未dev，并转到此新分支
+	git checkout -b dev
+		等同于：
+		git branch dev
+		git checkout dev
 
-学习git
 
-
-在test2里测试看看！
