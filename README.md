@@ -10,11 +10,18 @@
 			* $	git add .
 			* $	git commit -m "<提交的内容注释>"
 
+# 如何查看分支
+	* $ git branch -a  #查看全部分支，包括本地和远程
+	* $ git branch -l  #只查看本地分支
+	* $ git branch -r  #只查看远程分支
 
 # 在本地主分支master合并dev分支，将master更新到最新
 	* $	git checkout master
 		切换分支时，必须先将当前的分支进行commit提交，或者stash暂存。
 	* $	git merge dev
+
+# 如何push本地支路到远程仓库
+	* $ git push origin <branch-name>  #将想要push的分支推送过去，远程仓库自动会创建同名远程支路
 
 # 用git命令删除远程分支
 	* $ git branch -r   #查看有哪些远程分支
