@@ -57,11 +57,27 @@ $ git branch -d <branch-name>  #删除不需要的分支
 ```
 ## 本地无该分支，直接从远程已有的分支新建本地分支
 ```sh
-git checkout -b <NEW-BRANCH-NAME> <REMOTE-NAME>/<BRANCH-NAME> #使用该方式会在本地新建分支，并自动切换到该本地分支
+$ git checkout -b <NEW-BRANCH-NAME> <REMOTE-NAME>/<BRANCH-NAME> #使用该方式会在本地新建分支，并自动切换到该本地分支
 ```
 基本等同于：
 ```sh
     $ git fetch origin <branch-name>
     $ git checkout -b <new-branch-name>
     $ git merge origin/<branch-name>
+```
+
+## 添加上游仓库到本地,一般命名为upstram  #[参考链接](https://github.com/staticblog/wiki/wiki/%E4%BF%9D%E6%8C%81fork%E4%B9%8B%E5%90%8E%E7%9A%84%E9%A1%B9%E7%9B%AE%E5%92%8C%E4%B8%8A%E6%B8%B8%E5%90%8C%E6%AD%A5)
+
+```sh
+$ git remote add upstream  git@github.com:<Username>/<Project>.git  #上游仓库，一般就是原仓库。
+```
+* ### 将本地仓库和上游仓库的代码进行同步
+```sh
+    $ git fetch upstream  #抓取上游仓库到本地，默认到 upstream/master分支
+    $ git checkout master  #切换到本地仓库的主分支master 
+    $ git merge upstream/master  #将上游仓库在本地的最新分支upstream/master，合并到自己本地仓库的master分支，以保持最新状态。
+```
+* ### 推送已更新到最新的本地仓库master到自己的远程仓库origin里去
+```
+    $ git push origin master
 ```
