@@ -81,3 +81,20 @@ $ git remote add upstream  git@github.com:<Username>/<Project>.git  #上游仓�
 ```
     $ git push origin master
 ```
+
+# 后悔药
+
+* ## 修改了某（些）文件并且保存退出了，但未commit提交，想撤销修改。
+```sh
+$ git checkeout -- <file1> <file2>
+```
+
+* ##  已经提交commit了，但发现一些文件需要进一步修改
+```sh
+$ git reset HEAD~1 #这样做，进行的修改还在，是未提交commit的状态。
+```
+
+* ##  已经提交commit了，但发现一些文件需要进一步修改，同时恢复到上一个commit
+```sh
+$ git reset --hard HEAD  #就是恢复到上次commit后，未做任何修改，很“硬”的恢复
+```
