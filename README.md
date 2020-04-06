@@ -61,7 +61,7 @@ $ git checkout -b <NEW-BRANCH-NAME> <REMOTE-NAME>/<BRANCH-NAME> #使用该方式
 ```
 基本等同于：
 ```sh
-    $ git fetch origin <branch-name>
+    $ git fetch origin
     $ git checkout -b <new-branch-name>
     $ git merge origin/<branch-name>
 ```
